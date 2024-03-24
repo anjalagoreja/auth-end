@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Register User</title>
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .note-form-container {
+            max-width: 500px;
+            margin: auto;
+            margin-top: 50px;
+            padding: 20px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container note-form-container">
+    <h2 class="text-center mb-4">Register User</h2>
+    <form class="form-group" [formGroup]="registerUser" (submit)="submit()">
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" class="form-control" id="username" placeholder="Enter the username" required formControlName="username">
+        </div>
+        <div class="form-group">
+            <label for="Password">Password</label>
+            <input type="password" class="form-control" id="password" rows="5" placeholder="Enter the Password" required formControlName="password">
+        </div>
+        <div class="form-group">
+            <label for="Password">Confirm Password</label>
+            <input type="password" class="form-control" id="cpassword" rows="5" placeholder="Confirm Password" required formControlName="confirm_password">
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input class="form-control" id="email" rows="5" placeholder="Enter the Email" required formControlName="email">
+        </div>
+        <div class="form-group">
+            <label for="fname">Fullname</label>
+            <input class="form-control" id="fname" rows="5" placeholder="Enter the Fullname" required formControlName="fullname">
+        </div>
+        <div class="form-group">
+            <label for="phone_no">Phone No</label>
+            <input class="form-control" id="phone_no" rows="5" placeholder="Enter the Phone NO" required formControlName="phone_no">
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Register</button>
+    </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
